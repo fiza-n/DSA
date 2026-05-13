@@ -32,16 +32,25 @@ int count = 0;
 //     func(i-1, n);//backtracking call
 //     cout << i << " ";
 // }
-void func(int i ,  int n) {
-    if( i == n) return;
-    func(i+1, n);//backtracking call
-    cout << i << " ";
+// void func(int i ,  int n) {
+//     if( i == n) return;
+//     func(i+1, n);//backtracking call
+//     cout << i << " ";
+// }
+
+//sum of n numbers using recursion
+void func(int i, int sum){
+    if(i<1){
+        cout<<sum;
+        return;
+    }
+    func(i-1, sum+i);
 }
 int main() {
    // func(0,3);//TC- O(n) where n is the number of times the function is called, SC-O(n) due to recursive call stack
     //   func(4,1);
 
-    func(1,4);
+    func(5,0);
    
    return 0;
 }
